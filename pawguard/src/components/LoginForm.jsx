@@ -47,7 +47,6 @@ function LoginForm({ onLoginSuccess }) {
   return (
     <form className="login-form" onSubmit={handleSubmit}>
       {/* Variable rendered */}
-      <p className="form-date">{formTitle} — {currentDate}</p>
 
       <div className="form-group">
         <label htmlFor="email">Email Address</label>
@@ -83,18 +82,7 @@ function LoginForm({ onLoginSuccess }) {
       {message && <p className="login-message">{message}</p>}
 
       {/* Array rendered as UI list */}
-      {loginHistory.length > 0 && (
-        <div className="login-history">
-          <h3>Login History ({loginHistory.length})</h3>
-          <ul className="history-list">
-            {loginHistory.map((entry) => (
-              <li key={entry.id}>
-                {entry.email} — {entry.time}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      
     </form>
   );
 }
