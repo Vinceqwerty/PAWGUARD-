@@ -112,3 +112,38 @@ body {
   font-size: 14px;
   width: 100%;
 }
+
+.form-date {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.login-history {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.login-history h3 {
+  font-size: 14px;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  padding: 6px 0;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.history-list li:last-child {
+  border-bottom: none;
+}
