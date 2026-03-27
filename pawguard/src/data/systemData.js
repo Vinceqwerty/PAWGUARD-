@@ -24,7 +24,13 @@ export const dashboardCards = [
   {
     id: 4,
     title: "Lost Reports",
-    value: 1,
+    value: 5,
+    status: "critical",
+  },
+  {
+    id: 5,
+    title: "Ac",
+    value: 7,
     status: "critical",
   },
 ];
