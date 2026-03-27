@@ -5,10 +5,10 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: '#007AFF',
-        tabBarInactiveTintColor: '#8e8e93',
+        tabBarActiveTintColor: '#FF1493',
+        tabBarInactiveTintColor: '#ffbfdc',
         headerStyle: {
-          backgroundColor: '#007AFF',
+          backgroundColor: '#FF69B4',
         },
         headerTintColor: '#fff',
       }}
@@ -25,9 +25,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="explore"
         options={{
-          title: 'Explore',
+          title: 'Health Records',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search" size={size} color={color} />
+            <Ionicons name="heart" size={size} color={color} />
           ),
         }}
       />

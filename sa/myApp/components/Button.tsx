@@ -41,7 +41,7 @@ export default function Button({
       activeOpacity={0.7}
     >
       {loading ? (
-        <ActivityIndicator color={type === 'primary' ? '#fff' : '#007AFF'} />
+        <ActivityIndicator color={type === 'primary' ? '#fff' : '#FF1493'} />
       ) : (
         <Text style={textStyles}>{label}</Text>
       )}
@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
     minWidth: 120,
   },
   primaryButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#FF69B4',
   },
   secondaryButton: {
     backgroundColor: 'transparent',
     borderWidth: 1,
-    borderColor: '#007AFF',
+    borderColor: '#FF1493',
   },
   disabledButton: {
     opacity: 0.5,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   secondaryButtonText: {
-    color: '#007AFF',
+    color: '#FF1493',
   },
   disabledText: {
     opacity: 0.7,
