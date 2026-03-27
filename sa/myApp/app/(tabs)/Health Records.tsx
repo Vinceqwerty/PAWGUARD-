@@ -5,24 +5,24 @@ export default function HealthRecordsScreen() {
   const records = [
     {
       id: 1,
-      name: 'Buddy',
-      type: 'Dog',
-      lastCheckup: '2026-03-01',
-      notes: 'Vaccinations up-to-date, mild allergy treatment ongoing.',
+      timestamp: 'March 28, 2026 — 3:15 PM',
+      heartRate: '92 BPM',
+      temp: '38.4°C',
+      location: 'Safe Zone',
     },
     {
       id: 2,
-      name: 'Lucy',
-      type: 'Dog',
-      lastCheckup: '2026-02-20',
-      notes: 'Dental cleaning completed, weight stable.',
+      timestamp: 'March 28, 2026 — 2:05 PM',
+      alert: '⚠ High Temperature Alert',
+      temp: '39.8°C',
+      location: 'Dog Park',
     },
     {
       id: 3,
-      name: 'Max',
-      type: 'Dog',
-      lastCheckup: '2026-04-15 (scheduled)',
-      notes: 'Next wellness exam scheduled; monitor activity level.',
+      timestamp: 'March 28, 2026 — 1:30 PM',
+      heartRate: '88 BPM',
+      temp: '38.1°C',
+      location: 'Safe Zone',
     },
   ];
 
@@ -33,9 +33,14 @@ export default function HealthRecordsScreen() {
       <View style={styles.cardContainer}>
         {records.map((record) => (
           <View key={record.id} style={styles.recordCard}>
-            <Text style={styles.petName}>{record.name} ({record.type})</Text>
-            <Text style={styles.recordText}>Last Checkup: {record.lastCheckup}</Text>
-            <Text style={styles.recordText}>Notes: {record.notes}</Text>
+            <Text style={styles.timestamp}>{record.timestamp}</Text>
+            {record.alert ? (
+              <Text style={styles.alertText}>{record.alert}</Text>
+            ) : (
+              <Text style={styles.recordText}>Heart Rate: {record.heartRate}</Text>
+            )}
+            <Text style={styles.recordText}>Temp: {record.temp}</Text>
+            <Text style={styles.recordText}>Location: {record.location}</Text>
           </View>
         ))}
       </View>
@@ -77,9 +82,16 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
-  petName: {
-    fontSize: 18,
-    fontWeight: 'bold',
+  timestamp: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 6,
+    color: '#222',
+  },
+  alertText: {
+    fontSize: 14,
+    fontWeight: '700',
+    color: '#b53333',
     marginBottom: 4,
   },
   recordText: {
