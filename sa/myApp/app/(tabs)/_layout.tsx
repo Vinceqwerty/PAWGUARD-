@@ -1,5 +1,7 @@
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 export default function TabLayout() {
   return (
@@ -11,6 +13,11 @@ export default function TabLayout() {
           backgroundColor: '#d63384',
         },
         headerTintColor: '#fff',
+        headerRight: () => (
+          <TouchableOpacity onPress={() => router.replace('/(auth)/login')} style={{ marginRight: 15 }}>
+            <Ionicons name="log-out" size={24} color="#fff" />
+          </TouchableOpacity>
+        ),
       }}
     >
       <Tabs.Screen
